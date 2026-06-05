@@ -11,10 +11,10 @@ script = ExtResource("1_v6fml")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760205744]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1605912800]
 position = Vector2(0.5, -0.5)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_v6fml")

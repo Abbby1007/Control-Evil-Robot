@@ -3,6 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="1_elqb8"]
 [ext_resource type="Script" uid="uid://e2jvnki50bwy" path="res://scripts/main.gd" id="1_rvslj"]
 [ext_resource type="PackedScene" uid="uid://dahxnxjfyfnjn" path="res://scenes/robot.tscn" id="3_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="4_rarhs"]
+[ext_resource type="PackedScene" uid="uid://dj1ckodjbcw2n" path="res://scenes/levelWall.tscn" id="5_vcsgt"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rvslj"]
 normal = Vector2(0.99997044, -0.0076920516)
@@ -12,6 +14,9 @@ normal = Vector2(-0.007092023, 0.9999749)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0bbpv"]
 distance = -4.4649215
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c01mt"]
+size = Vector2(126.633316, 114.2865)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_elqb8"]
 size = Vector2(51, 53)
@@ -27,9 +32,6 @@ size = Vector2(49.780228, 53.04509)
 
 [node name="Main" type="Node2D" unique_id=821967079]
 script = ExtResource("1_rvslj")
-
-[node name="Player" parent="." unique_id=1322054010 instance=ExtResource("1_elqb8")]
-position = Vector2(124, 120)
 
 [node name="Walls" type="StaticBody2D" parent="." unique_id=1966784886]
 
@@ -54,11 +56,41 @@ position = Vector2(280, 685)
 scale = Vector2(5.4799986, 4.0000014)
 shape = SubResource("WorldBoundaryShape2D_0bbpv")
 
+[node name="bottomInWall" type="StaticBody2D" parent="Walls" unique_id=1297492772]
+position = Vector2(111.00001, 149)
+scale = Vector2(1.674125, -0.13999897)
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/bottomInWall" unique_id=276004115]
+position = Vector2(-16.997593, 0.28621197)
+scale = Vector2(0.76106846, 1)
+texture = ExtResource("4_rarhs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/bottomInWall" unique_id=1296990425]
+position = Vector2(-16.400272, 0.28621197)
+scale = Vector2(0.76106846, 1)
+shape = SubResource("RectangleShape2D_c01mt")
+
+[node name="rightInWall" type="StaticBody2D" parent="Walls" unique_id=1018290126]
+position = Vector2(160.00003, 104.000015)
+rotation = 1.5755091
+scale = Vector2(1.674125, -0.13999897)
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/rightInWall" unique_id=59978123]
+position = Vector2(-16.997593, 0.28621197)
+scale = Vector2(0.76106846, 1)
+texture = ExtResource("4_rarhs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/rightInWall" unique_id=1232534980]
+position = Vector2(-16.400272, 0.28621197)
+scale = Vector2(0.76106846, 1)
+shape = SubResource("RectangleShape2D_c01mt")
+
 [node name="LeftArrow" type="Label" parent="." unique_id=1246470054]
-offset_left = 7.0
-offset_top = 39.00003
-offset_right = 91.0
-offset_bottom = 176.00003
+offset_left = 9.0
+offset_top = 28.0
+offset_right = 66.0
+offset_bottom = 165.0
+scale = Vector2(0.60107976, 0.592727)
 theme_override_font_sizes/font_size = 100
 text = "<"
 metadata/_edit_group_ = true
@@ -70,11 +102,12 @@ position = Vector2(29.5, 70.5)
 shape = SubResource("RectangleShape2D_elqb8")
 
 [node name="RightArrow2" type="Label" parent="." unique_id=756378888]
-offset_left = 244.0
-offset_top = 182.00003
-offset_right = 328.0
-offset_bottom = 319.00003
+offset_left = 148.0
+offset_top = 118.00001
+offset_right = 205.0
+offset_bottom = 255.0
 rotation = 3.136244
+scale = Vector2(0.6742099, 0.6607011)
 theme_override_font_sizes/font_size = 100
 text = "<"
 metadata/_edit_group_ = true
@@ -86,11 +119,12 @@ position = Vector2(29.074432, 70.702286)
 shape = SubResource("RectangleShape2D_0bbpv")
 
 [node name="UpArrow" type="Label" parent="." unique_id=782643208]
-offset_left = 195.0
-offset_top = 14.0
-offset_right = 279.0
-offset_bottom = 151.0
+offset_left = 126.000015
+offset_top = 7.0
+offset_right = 210.00002
+offset_bottom = 144.0
 rotation = 1.5702207
+scale = Vector2(0.64000034, 0.7199085)
 theme_override_font_sizes/font_size = 100
 text = "<"
 metadata/_edit_group_ = true
@@ -102,11 +136,12 @@ position = Vector2(28.45858, 71.5193)
 shape = SubResource("RectangleShape2D_rarhs")
 
 [node name="DownArro" type="Label" parent="." unique_id=797705923]
-offset_left = 49.999973
-offset_top = 227.00003
-offset_right = 133.99997
-offset_bottom = 364.00003
+offset_left = 22.000002
+offset_top = 134.0
+offset_right = 106.0
+offset_bottom = 271.0
 rotation = -1.5587478
+scale = Vector2(0.56196165, 0.679057)
 theme_override_font_sizes/font_size = 100
 text = "<"
 metadata/_edit_group_ = true
@@ -119,7 +154,74 @@ scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_vcsgt")
 
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("3_0bbpv")]
-position = Vector2(446, 458)
+position = Vector2(381, 658)
+
+[node name="Player" parent="." unique_id=1322054010 instance=ExtResource("1_elqb8")]
+position = Vector2(75, 71)
+
+[node name="levelWalls" type="Node2D" parent="." unique_id=1174366816]
+position = Vector2(596, 693)
+rotation = -1.5707964
+scale = Vector2(2.32, 1)
+
+[node name="levelWall" parent="levelWalls" unique_id=359350620 instance=ExtResource("5_vcsgt")]
+position = Vector2(-0.862068, -53)
+scale = Vector2(0.8706901, 1)
+
+[node name="levelWall2" parent="levelWalls" unique_id=1435516001 instance=ExtResource("5_vcsgt")]
+position = Vector2(101.72415, -45.00002)
+rotation = -1.5707964
+scale = Vector2(3.3515358, 0.657248)
+
+[node name="levelWall6" parent="levelWalls" unique_id=20858112 instance=ExtResource("5_vcsgt")]
+position = Vector2(145.25858, -225)
+rotation = -1.5707964
+scale = Vector2(2.8687778, 0.657248)
+
+[node name="levelWall8" parent="levelWalls" unique_id=1390365968 instance=ExtResource("5_vcsgt")]
+position = Vector2(193.96552, -17.99998)
+rotation = -1.5707964
+scale = Vector2(3.0239496, 0.657248)
+
+[node name="levelWall7" parent="levelWalls" unique_id=1199893025 instance=ExtResource("5_vcsgt")]
+position = Vector2(154.31032, -255)
+rotation = -0.030559778
+scale = Vector2(0.3439578, 1.3939667)
+
+[node name="levelWall9" parent="levelWalls" unique_id=814662636 instance=ExtResource("5_vcsgt")]
+position = Vector2(111.20691, -134)
+rotation = -0.030559778
+scale = Vector2(0.3439578, 1.3939667)
+
+[node name="levelWall10" parent="levelWalls" unique_id=1147206522 instance=ExtResource("5_vcsgt")]
+position = Vector2(156.46553, -38.000008)
+rotation = -0.030559778
+scale = Vector2(0.3439578, 1.3939667)
+
+[node name="levelWall11" parent="levelWalls" unique_id=1707800049 instance=ExtResource("5_vcsgt")]
+position = Vector2(201.72414, -135.99998)
+rotation = -0.030559778
+scale = Vector2(0.49820802, 1.3939667)
+
+[node name="levelWall12" parent="levelWalls" unique_id=1759281801 instance=ExtResource("5_vcsgt")]
+position = Vector2(274.13794, -294.99997)
+rotation = 1.5714957
+scale = Vector2(1.3952067, 0.71370786)
+
+[node name="levelWall3" parent="levelWalls" unique_id=1967408142 instance=ExtResource("5_vcsgt")]
+position = Vector2(106.46553, -456)
+rotation = -3.1415927
+scale = Vector2(0.66299486, 0.567)
+
+[node name="levelWall4" parent="levelWalls" unique_id=1641907958 instance=ExtResource("5_vcsgt")]
+position = Vector2(71.12069, -301)
+rotation = -3.1415927
+scale = Vector2(0.5767874, 0.567)
+
+[node name="levelWall5" parent="levelWalls" unique_id=2126129425 instance=ExtResource("5_vcsgt")]
+position = Vector2(62.500004, -212.99997)
+rotation = -1.579523
+scale = Vector2(0.783685, 0.567)
 
 [connection signal="body_entered" from="LeftArrow/LeftArea2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="LeftArrow/LeftArea2D" to="." method="_on_area_2d_body_exited"]

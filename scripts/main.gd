@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var robot: CharacterBody2D = $Robot
-var robotSpeed = 100
+var robotSpeed = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
