@@ -1,26 +1,40 @@
 [gd_scene format=3 uid="uid://p8vlxec70qdj"]
 
 [ext_resource type="PackedScene" uid="uid://ce50yt7p5h1x6" path="res://scenes/Player.tscn" id="1_elqb8"]
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="2_rvslj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bbpv"]
-size = Vector2(128.06326, 125)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rvslj"]
+normal = Vector2(0.99997044, -0.0076920516)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_elqb8"]
+normal = Vector2(-0.007092023, 0.9999749)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0bbpv"]
+distance = -4.4649215
 
 [node name="Main" type="Node2D" unique_id=821967079]
 
-[node name="Player" parent="." unique_id=1015829309 instance=ExtResource("1_elqb8")]
-position = Vector2(553, 398)
+[node name="CharacterBody2D" parent="." unique_id=1322054010 instance=ExtResource("1_elqb8")]
+position = Vector2(321, 316)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=931495949]
-position = Vector2(590, 608)
-scale = Vector2(1.1599976, 0.72)
-metadata/_edit_group_ = true
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1966784886]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=31954744]
-scale = Vector2(7.933578, 0.84704065)
-texture = ExtResource("2_rvslj")
+[node name="LeftWall" type="CollisionShape2D" parent="Walls" unique_id=1317358420]
+position = Vector2(-4, 352.00003)
+scale = Vector2(4.5600004, 4.5600004)
+shape = SubResource("WorldBoundaryShape2D_rvslj")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=363690016]
-position = Vector2(1, -0.5)
-scale = Vector2(7.933578, 0.84704065)
-shape = SubResource("RectangleShape2D_0bbpv")
+[node name="RightWall" type="CollisionShape2D" parent="Walls" unique_id=466644906]
+position = Vector2(707.42566, 269)
+rotation = -3.1395462
+scale = Vector2(4.5600004, 4.5600004)
+shape = SubResource("WorldBoundaryShape2D_rvslj")
+
+[node name="TopWall" type="CollisionShape2D" parent="Walls" unique_id=22951721]
+position = Vector2(280, 0)
+scale = Vector2(5.4799986, 4.0000014)
+shape = SubResource("WorldBoundaryShape2D_elqb8")
+
+[node name="BottomWall" type="CollisionShape2D" parent="Walls" unique_id=778905446]
+position = Vector2(280, 685)
+scale = Vector2(5.4799986, 4.0000014)
+shape = SubResource("WorldBoundaryShape2D_0bbpv")

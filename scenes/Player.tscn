@@ -1,18 +1,20 @@
 [gd_scene format=3 uid="uid://ce50yt7p5h1x6"]
 
 [ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_3vyb7"]
-[ext_resource type="Script" uid="uid://bsl2tnq2455sf" path="res://scenes/Player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://cqjq78odpp8xr" path="res://scripts/player.gd" id="1_v6fml"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(128, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
+size = Vector2(121, 123)
 
-[node name="Player" type="CharacterBody2D" unique_id=1015829309]
-position = Vector2(556, 371)
-script = ExtResource("1_g2els")
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1322054010]
+script = ExtResource("1_v6fml")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1023977820]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760205744]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3vyb7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1794114369]
-shape = SubResource("RectangleShape2D_g2els")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1605912800]
+position = Vector2(0.5, -0.5)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_v6fml")
