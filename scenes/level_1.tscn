@@ -511,7 +511,7 @@ position = Vector2(5, 22.5)
 shape = SubResource("RectangleShape2D_ema3p")
 
 [node name="Robot" parent="." unique_id=1730246212 instance=ExtResource("4_rka8t")]
-position = Vector2(670, 664)
+position = Vector2(309, 28)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." unique_id=1322054010 instance=ExtResource("2_hn12h")]

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3ksppkk1pr18"]
+
+[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_jbojv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbojv"]
+size = Vector2(123.33333, 123.33333)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sx1j4"]
+size = Vector2(64, 63)
+
+[node name="goal" type="StaticBody2D" unique_id=83895053]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2013773158]
+position = Vector2(5, 23)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jbojv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898004991]
+position = Vector2(4, 23)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_jbojv")
+disabled = true
+
+[node name="goalArea" type="Area2D" parent="." unique_id=183700224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goalArea" unique_id=313420539]
+position = Vector2(5, 22.5)
+shape = SubResource("RectangleShape2D_sx1j4")
