@@ -1,4 +1,4 @@
-# Contorl_Game
+# Control Evil Robot
 Game Title: Control Evil Robot
 
 Made for the Mini Jam  #212 (72 Hour)
