@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://dahxnxjfyfnjn"]
 
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_br0rw"]
+[ext_resource type="Texture2D" uid="uid://dqiaw16s7ivir" path="res://art/Evil Robot.png" id="1_br0rw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykvnc"]
-size = Vector2(123, 122)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ykvnc"]
+radius = 42.0
+height = 124.0
 
 [node name="Robot" type="CharacterBody2D" unique_id=1730246212]
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=218306211]
 position = Vector2(0.20000076, -2.7999992)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 texture = ExtResource("1_br0rw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=48947833]
-position = Vector2(0.70000076, -2.7999992)
+position = Vector2(7, -4)
 scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_ykvnc")
+shape = SubResource("CapsuleShape2D_ykvnc")

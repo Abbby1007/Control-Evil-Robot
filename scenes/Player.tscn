@@ -1,20 +1,20 @@
 [gd_scene format=3 uid="uid://ce50yt7p5h1x6"]
 
-[ext_resource type="Texture2D" uid="uid://c6ex8tsw8x11i" path="res://icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cqjq78odpp8xr" path="res://scripts/player.gd" id="1_v6fml"]
+[ext_resource type="Texture2D" uid="uid://bw3dlag0af0s5" path="res://art/astronaut.png" id="2_v6fml"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
-size = Vector2(121, 123)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v6fml"]
+radius = 56.666664
+height = 173.33333
 
 [node name="Player" type="CharacterBody2D" unique_id=1322054010]
 script = ExtResource("1_v6fml")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1760205744]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_3vyb7")
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_v6fml")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1605912800]
-position = Vector2(0.5, -0.5)
+position = Vector2(0, -1)
 scale = Vector2(0.3, 0.3)
-shape = SubResource("RectangleShape2D_v6fml")
+shape = SubResource("CapsuleShape2D_v6fml")
