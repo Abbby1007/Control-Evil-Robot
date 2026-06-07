@@ -14,12 +14,12 @@ The maze mechanic of the game is that the playetr will guide a robot through fou
 This was my first game Jam and I am happy with the results.
 
 Building Process:
-When Thinking of a game idea, I wanted to make a game with godot information I already knew. The information I mainly knew was that if the palyer enters a certain area then something will happen. After 10 minutes of brain storming I thought of the concept where the player would CONTROL something else. When the limitation "You are the enemy" was revealed I thought that the player would just control something that would be bad. I am honestly happy with how quickly I came up with these ideas and I know for future game jams it wont be this easy. For the designs of the mazes I used online images for the start , but then I found my self adding my own parts to the mazes.
+When thinking of a game idea, I wanted to make a game with godot information I already knew. The information I mainly knew was that if the palyer enters a certain area then something will happen. After 10 minutes of brain storming I thought of the concept where the player would CONTROL something else. When the limitation "You are the enemy" was revealed I thought that the player would just control something that would be bad. I am honestly happy with how quickly I came up with these ideas and I know for future game jams it wont be this easy. For the designs of the mazes I used online images for the start , but then I found my self adding my own parts to the mazes.
 
-I am proud for producing my own player and robot sprites. The Tile set is "The world of Solaria" by Jamie Brownhill
+I am proud for producing my own player and robot sprites. The tile set is "The World of Solaria" by Jamie Brownhill
 For future game Jams I might try to make time for music or sound effects.
 
-I am also proud of my self for actually finishing this game and not giving
+I am also proud of my self for actually finishing this game and not giving up.
 
 
 
